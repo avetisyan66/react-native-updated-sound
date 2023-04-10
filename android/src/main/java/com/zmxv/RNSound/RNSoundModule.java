@@ -431,19 +431,23 @@ public class RNSoundModule extends ReactContextBaseJavaModule implements AudioMa
   }
 
   //turn speaker on
-  @ReactMethod
-  public void setSpeakerphoneOn(final Double key, final Boolean speaker) {
-    MediaPlayer player = this.playerPool.get(key);
-    if (player != null) {
-      AudioManager audioManager = (AudioManager)this.context.getSystemService(this.context.AUDIO_SERVICE);
-      if(speaker){
-        audioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
-      }else{
-        audioManager.setMode(AudioManager.MODE_NORMAL);
+    @ReactMethod
+    public void setSpeakerphoneOn(final Double key, final Boolean speaker) {
+      MediaPlayer player = this.playerPool.get(key);
+      if (player != null) {
+        AudioManager audioManager = (AudioManager)this.context.getSystemService(this.context.AUDIO_SERVICE);
+        if(speaker){
+          audioManager.setMode(AudioManager.MODE_NORMAL);
+          audioManager.startBluetoothSco();
+          audioManager.setBluetoothScoOn(true);
+        }else{
+          audioManager.setMode(AudioManager.MODE_IN_COMMUNICATION);
+          audioManager.startBluetoothSco();
+          audioManager.setBluetoothScoOn(false);
+        }
+        audioManager.setSpeakerphoneOn(speaker);
       }
-      audioManager.setSpeakerphoneOn(speaker);
     }
-  }
 
   @ReactMethod
   public void setCategory(final String category, final Boolean mixWithOthers) {

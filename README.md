@@ -1,10 +1,6 @@
-# react-native-sound
+# react-native-updated-sound
 
-[![](https://img.shields.io/npm/v/react-native-sound.svg?style=flat-square)][npm]
-[![](https://img.shields.io/npm/l/react-native-sound.svg?style=flat-square)][npm]
-[![](https://img.shields.io/npm/dm/react-native-sound.svg?style=flat-square)][npm]
-
-[npm]: https://www.npmjs.com/package/react-native-sound
+[npm]: https://www.npmjs.com/package/react-native-updated-sound
 
 React Native module for playing sound clips on iOS, Android, and Windows.
 
@@ -13,12 +9,12 @@ and use at your own risk!
 
 ## Feature matrix
 
-React-native-sound does not support streaming. See [#353][] for more info.
+React-native-updated-sound does not support streaming. See [#353][] for more info.
 Of course, we would welcome a PR if someone wants to take this on.
 
 In iOS, the library uses [AVAudioPlayer][], not [AVPlayer][].
 
-[#353]: https://github.com/zmxv/react-native-sound/issues/353
+[#353]: https://github.com/zmxv/react-native-updated-sound/issues/353
 [AVAudioPlayer]: https://developer.apple.com/documentation/avfoundation/avaudioplayer
 [AVPlayer]: https://developer.apple.com/documentation/avfoundation/avplayer
 
@@ -50,13 +46,13 @@ Set speed | ✓ | ✓ |
 First install the npm package from your app directory:
 
 ```javascript
-npm install react-native-sound --save
+npm install react-native-updated-sound --save
 ```
 
 Then link it automatically using:
 
 ```javascript
-react-native link react-native-sound
+react-native link react-native-updated-sound
 ```
 
 **If you encounter this error**
@@ -79,23 +75,12 @@ If you still experience issues, **know that this is the most common build issue.
 issues linked from it for possible resolution. A pull request with improved
 documentation on this would be welcome!
 
-[#592]: https://github.com/zmxv/react-native-sound/issues/592
+[#592]: https://github.com/zmxv/react-native-updated-sound/issues/592
 
 ### Manual Installation Notes
 
-Please see the Wiki for these details https://github.com/zmxv/react-native-sound/wiki/Installation
+Please see the Wiki for these details https://github.com/zmxv/react-native-updated-sound/wiki/Installation
 
-
-## Help with React-Native-Sound
-
-* For react-native-sound developers  [![][gitter badge]](https://gitter.im/react-native-sound/developers)
-* For help using react-native-sound  [![][gitter badge]](https://gitter.im/react-native-sound/Help)
-
-[gitter badge]: https://img.shields.io/gitter/room/react-native-sound/developers.svg?format=flat-square
-
-## Demo project
-
-https://github.com/zmxv/react-native-sound-demo
 
 ## Player
 
@@ -111,8 +96,8 @@ First you'll need to add audio files to your project.
 - iOS: Open Xcode and add your sound files to the project (Right-click the project and select `Add Files to [PROJECTNAME]`)
 
 ```js
-// Import the react-native-sound module
-var Sound = require('react-native-sound');
+// Import the react-native-updated-sound module
+var Sound = require('react-native-updated-sound');
 
 // Enable playback in silence mode
 Sound.setCategory('Playback');
